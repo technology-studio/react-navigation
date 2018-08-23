@@ -21,7 +21,7 @@ class SwitchContainer extends React.Component {
       <Container
         flex={ 1 }
         { ...this.props }
-        navigation={childNavigation}
+        // navigation={childNavigation}
       >
         <SceneView
           component={ChildComponent}
