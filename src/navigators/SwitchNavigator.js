@@ -6,9 +6,13 @@ import createNavigator from '../navigators/createNavigator';
 
 export default (routeConfigMap, switchConfig = {}) => {
   const router = SwitchRouter(routeConfigMap, switchConfig);
+  const { container } = switchConfig;
 
   const navigator = createNavigator(router, routeConfigMap, switchConfig)(
-    props => <SwitchView {...props} />
+    props => <SwitchView
+        {...props}
+        container={ container }
+    />
   );
 
   return createNavigationContainer(navigator);
